@@ -1,0 +1,54 @@
+@import '../../../../styles/variables';
+
+.countries {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.country {
+  margin: 15px;
+  width: calc(100% / 3 - 30px);
+  padding: 25px;
+  background-color: $color-white;
+  box-shadow: $box-shadow;
+  min-height: 200px;
+  border-radius: 10px;
+  transition: 0.3s;
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: $color-main;
+    margin: 0px 0px 10px 0px;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+      color: $color-major;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: baseline;
+  }
+  &__temp_day {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    color: $color-major;
+    margin-right: 5px;
+  }
+  &__temp_night {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  &__button {
+    margin: 15px 0px 0px 0px;
+    width: 100%;
+  }
+}
