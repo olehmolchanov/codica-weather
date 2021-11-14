@@ -26,10 +26,6 @@
     color: $color-main;
     margin: 0px 0px 10px 0px;
     transition: 0.3s;
-    cursor: pointer;
-    &:hover {
-      color: $color-major;
-    }
   }
   &__wrapper {
     display: flex;
