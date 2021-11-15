@@ -16,7 +16,7 @@ export const CountryItem = ({ country }: Props) => {
         <div className={s.country__temp_night}>{country.temp_night}</div>
       </div>
       <div className={s.country__button}>
-        <button className="btn">Смотреть</button>
+        <button className="btn">More details</button>
       </div>
     </div>
   );

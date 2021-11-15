@@ -2,8 +2,11 @@ import React from 'react';
 import { CountryItem } from './CountryItem';
 
 import s from './Countries.module.scss';
+import { Weather } from '../../../../store/types';
 
-interface Props {}
+interface Props {
+  weather: Weather;
+}
 
 export interface Country {
   name: string;
@@ -11,12 +14,12 @@ export interface Country {
   temp_night: string;
 }
 
-export const Countries = (props: Props) => {
+export const Countries = ({ weather }: Props) => {
   const countries: Country[] = [
     {
-      name: 'Запорожье',
-      temp_day: '15°',
-      temp_night: '10°',
+      name: `${weather.name}`,
+      temp_day: `${Math.floor(weather.main.temp)}°`,
+      temp_night: `${Math.floor(weather.main.temp_min)}°`,
     },
     {
       name: 'Киев',
