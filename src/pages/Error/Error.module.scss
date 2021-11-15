@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+.error {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__title {
+    text-align: center;
+    font-size: 20vw;
+    color: $color-major;
+  }
+}
