@@ -1,9 +1,14 @@
 import { AxiosResponse } from 'axios';
 import api from '../axios';
-import { Weather } from '../store/types';
 
-export class WeatherService {
-  static getCurrentWeather(city: string): Promise<AxiosResponse<Weather>> {
-    return api.get<Weather>(`/weather?q=${city}`);
-  }
+type Weather = {
+   name: string;
+   main: {
+      temp: number;
+      temp_min: number;
+   };
+};
+
+export function getCurrentWeather(city: string): Promise<AxiosResponse<Weather>> {
+   return api.get<Weather>(`/weather?q=${city}`);
 }
